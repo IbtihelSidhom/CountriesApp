@@ -1,9 +1,10 @@
 import React from 'react';
 import './App.css';
-import Button from 'antd/es/button';
-import { Layout, PageHeader } from 'antd';
+import { PageHeader } from 'antd';
 import CountryInput from '../components/CountryInput';
-const { Header, Footer, Sider, Content } = Layout;
+import CountryFlag from '../components/CountryFlag';
+import CountryInfos from '../components/CountryInfos';
+import CountryInNumbers from '../components/CountryInNumbers';
 
 const App = () => {
 
@@ -11,6 +12,9 @@ const App = () => {
     <div className="App" >
       <PageHeader onBack={() => null} title="Country" subTitle="search the details of a country by name " />
       <CountryInput />
+      <CountryFlag />
+      <CountryInfos />
+      <CountryInNumbers />
     </div>
   );
 };
