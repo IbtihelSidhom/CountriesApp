@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from "react-redux";
-import { getCountryName } from '../selectors/countryName';
-import { setCountryName } from '../actions/index';
+import { getCountryName } from '../selectors/index';
+import { setCountryName, fetchCountryDetails } from '../actions/index';
 import { Input } from 'antd';
 
 
@@ -16,8 +16,9 @@ class CountryInput extends Component {
     };
 
     handlePressEnter = (e) => {
-        const { setCountryNameAction } = this.props;
+        const { setCountryNameAction, fetchCountryDetailsAction } = this.props;
         setCountryNameAction(e.target.value);
+        fetchCountryDetailsAction(this.state.countryName);
         this.setState({ countryName: "" });
     };
 
@@ -43,7 +44,8 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
     return {
-        setCountryNameAction: countryName => dispatch(setCountryName(countryName))
+        setCountryNameAction: countryName => dispatch(setCountryName(countryName)),
+        fetchCountryDetailsAction: countryName => dispatch(fetchCountryDetails(countryName))
     };
 };
 
