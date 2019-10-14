@@ -1,5 +1,14 @@
 @import '~antd/dist/antd.css';
 
+body {
+  background-image: url("../Assets/map8.jpg");
+  background-position: center center;
+  background-size: cover;
+  position: relative;
+  z-index: -10;
+}
+
+
 .App {
   text-align: center;
 }
