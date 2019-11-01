@@ -1,7 +1,6 @@
 import React from 'react';
 import './App.css';
 import SearchBar from '../components/SearchBar';
-import CountryFlag from '../components/CountryFlag';
 import CountryInfos from '../components/CountryInfos';
 import CountryInNumbers from '../components/CountryInNumbers';
 import "./App.css";
@@ -22,7 +21,6 @@ const App = () => {
 
       <div className="content">
 
-        <CountryFlag />
         <CountryInfos />
         <CountryInNumbers />
       </div>
