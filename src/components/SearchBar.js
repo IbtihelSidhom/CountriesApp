@@ -2,10 +2,11 @@ import React, { Component } from 'react';
 import { connect } from "react-redux";
 import { getCountryName } from '../selectors/index';
 import { setCountryName, fetchCountryDetails } from '../actions/index';
-import { Input } from 'antd';
+import { searchIcon } from "../assets/icons/index";
+import "./index.css";
 
 
-class CountryInput extends Component {
+class SearchBar extends Component {
     constructor(props) {
         super(props);
         this.state = { countryName: "" };
@@ -16,22 +17,30 @@ class CountryInput extends Component {
     };
 
     handlePressEnter = (e) => {
+        e.preventDefault();
         const { setCountryNameAction, fetchCountryDetailsAction } = this.props;
-        setCountryNameAction(e.target.value);
+        setCountryNameAction(this.state.countryName);
         fetchCountryDetailsAction(this.state.countryName);
         this.setState({ countryName: "" });
     };
 
     render() {
         return (
-            <>
-                <Input
-                    placeholder="Basic usage"
-                    value={this.state.countryName}
-                    onChange={this.handleChange}
-                    onPressEnter={event => this.handlePressEnter(event)}
-                />
-            </>
+
+            <form className="search" onSubmit={event => this.handlePressEnter(event)}>
+                <div className="search-items">
+                    <img className="search-icon" src={searchIcon} />
+
+                    <input
+                        className="search-input"
+                        type="text"
+                        placeholder="Enter country name..."
+                        value={this.state.countryName}
+                        onChange={this.handleChange}
+                    />
+                </div>
+            </form>
+
         );
     }
 };
@@ -52,4 +61,4 @@ const mapDispatchToProps = dispatch => {
 export default connect(
     mapStateToProps,
     mapDispatchToProps
-)(CountryInput);
+)(SearchBar);
