@@ -1,38 +1,34 @@
 import React from "react";
 import { connect } from "react-redux";
 import { getCountryDetails } from "../selectors";
-import { Card, Empty } from 'antd';
-import { Statistic, Row, Col, Icon } from 'antd';
-
-const { Meta } = Card;
+import "./index.css";
+import { populationIcon, areaIcon, telephoneIcon, numbersIcon } from "../assets/icons/index";
 
 function CountryInNumbers(props) {
     const { countryDetails } = props;
     return (
-        <>
-            <Row gutter={40}>
-                <Col span={5}>
-                    <Card>
-                        <Statistic title="population" value={countryDetails.population} prefix={<Icon type="team" />} />
-                    </Card>
-                </Col>
-                <Col span={5}>
-                    <Card>
-                        <Statistic title="Area" value={countryDetails.area} suffix="km" />
-                    </Card>
-                </Col>
-                <Col span={5}>
-                    <Card>
-                        <Statistic title="Numeric Code" value={countryDetails.numericCode} prefix={<Icon type="global" />} />
-                    </Card>
-                </Col>
-                <Col span={5}>
-                    <Card>
-                        <Statistic title="Calling Code" value={countryDetails.callingCodes} prefix={<Icon type="phone" />} />
-                    </Card>
-                </Col>
-            </Row>
-        </>
+        <div className="CountryInNumbersContainer">
+            <div className="Card">
+                <p> Population </p>
+                <img className="icon" src={populationIcon} />
+                <p> {countryDetails.population} </p>
+            </div>
+            <div className="Card">
+                <p> Area </p>
+                <img className="icon" src={areaIcon} />
+                <p> {countryDetails.area} km</p>
+            </div>
+            <div className="Card">
+                <p> Numeric Code </p>
+                <img className="icon" src={numbersIcon} />
+                <p> {countryDetails.numericCode} </p>
+            </div>
+            <div className="Card">
+                <p> Calling Code </p>
+                <img className="icon" src={telephoneIcon} />
+                <p> {countryDetails.callingCodes} </p>
+            </div>
+        </div >
     );
 
 };

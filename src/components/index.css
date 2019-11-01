@@ -1,0 +1,81 @@
+.Card{
+    width: 20%;
+    margin: auto;
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,.2), 0 6px 20px 0 rgba(0,0,0,.19);
+    padding: 16px;
+    text-align: center;
+}
+
+.CountryInNumbersContainer {
+    display: flex; 
+    justify-content: space-evenly;
+}
+
+.CountryInfosContainer {
+    display: flex; 
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.FlagContainer {
+    width: 100%;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.2), 0 3px 10px 0 rgba(0,0,0,.19);
+    object-fit: contain;
+}
+
+.icon {
+    width: 30%;
+    text-align: center;
+    transition: .5s;
+}
+
+.search {
+    top: 100px;
+    margin-top: 10px;
+    bottom: 100%;
+    width: 50%;
+    left: 0;
+    right: 0;
+    position: sticky;
+    text-align: center;
+    z-index: 10;
+    background: rgba(47, 45, 67, 0.6);
+    height: 80px;
+    transform: translateZ(0);
+    display: inline-block;
+    border-radius: 4px;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+.search-items{
+    display: flex; 
+    flex-direction: column;
+
+}
+
+.search-input {
+    width: 50%;
+    padding: 10px;
+    margin: 20px;
+    /* background: 0 0; */
+    /* color: rgb(56, 47, 47); */
+    border: 1px solid #eee;
+    border-radius: 4px;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.search-icon { 
+  width: 5%;
+  margin: 13px;
+  padding: 10px;
+  margin-left: 100px;
+}

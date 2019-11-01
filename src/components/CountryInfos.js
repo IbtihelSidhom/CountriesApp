@@ -1,28 +1,26 @@
 import React from "react";
 import { connect } from "react-redux";
 import { getCountryDetails } from "../selectors";
-import { Card } from 'antd';
+import "./index.css";
 
-const { Meta } = Card;
-const gridStyle = {
-    width: '25%',
-    textAlign: 'center',
-    padding: 20
-};
 
 function CountryInfos(props) {
     const { countryDetails } = props;
     return (
-        <>
-            <Card title="Country Infos">
-                <Card.Grid style={gridStyle}>Capital: {countryDetails.capital}</Card.Grid>
-                <Card.Grid style={gridStyle}>Population: {countryDetails.population}</Card.Grid>
-                <Card.Grid style={gridStyle}>Region: {countryDetails.region} </Card.Grid>
-                <Card.Grid style={gridStyle}>Subregion: {countryDetails.subregion} </Card.Grid>
-            </Card>
-
-
-        </>
+        <div className="CountryInfosContainer">
+            <div className="Card">
+                <p> Capital </p>
+                <p> {countryDetails.capital} </p>
+            </div>
+            <div className="Card">
+                <p> Region </p>
+                <p> {countryDetails.region} </p>
+            </div>
+            <div className="Card">
+                <p> Subregion </p>
+                <p> {countryDetails.subregion} </p>
+            </div>
+        </div>
     );
 
 };

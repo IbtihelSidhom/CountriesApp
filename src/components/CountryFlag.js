@@ -1,26 +1,15 @@
 import React from "react";
 import { connect } from "react-redux";
 import { getCountryFlag, getCountryName } from "../selectors";
-import { Card, Empty } from 'antd';
-
-const { Meta } = Card;
+import "./index.css";
 
 function CountryFlag(props) {
     const { countryFlag, countryName } = props;
     return (
-        <>
-            <Card
-                //loading={true}
-                hoverable={true}
-                style={{ width: 300 }}
-                cover={<img alt="flag" src={countryFlag} />}
-            >
-                {/* <Empty description={false} /> */}
-                <Meta title={countryName} description="..." />
-            </Card>
-
-
-        </>
+        <div className="Card">
+            <img src={countryFlag} className="FlagContainer" />
+            <p> {countryName} </p>
+        </div>
     );
 
 };
