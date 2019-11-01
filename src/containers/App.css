@@ -1,14 +1,49 @@
-@import '~antd/dist/antd.css';
-
 body {
-  background-image: url("../Assets/map8.jpg");
+  margin: 0;
+  padding: 0;
+  font-family: cursive;
+}
+
+header {
+  margin: 0px;
+  padding: 0px;
+  height: 80px;
+  background-color: bisque;
+  width: 100%;
+  z-index: 10;  
+  position: fixed;
+  display: flex; 
+  flex-direction: row; 
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,.2), 0 3px 10px 0 rgba(0,0,0,.19);
+
+}
+
+.banner {
+  width: 100%;
+  height: 500px;
+  position: fixed;
+  top: 80px;
+  background-color: rgb(199, 193, 193);
+  background-image: url("../assets/img/bg3.jpg");
   background-position: center center;
   background-size: cover;
-  position: relative;
   z-index: -10;
 }
 
+.content {
+  width: 100%;
+  position: relative;
+  top: 400px;
+  background-color: antiquewhite;
+  height: 1000px;
+}
 
 .App {
   text-align: center;
 }
+
+#icon {
+    height: 60px;
+    padding: 10px;
+    float: left;
+} 
