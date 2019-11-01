@@ -23,7 +23,6 @@ header {
   height: 500px;
   position: fixed;
   top: 80px;
-  background-color: rgb(199, 193, 193);
   background-image: url("../assets/img/bg3.jpg");
   background-position: center center;
   background-size: cover;
@@ -34,7 +33,7 @@ header {
   width: 100%;
   position: relative;
   top: 400px;
-  background-color: antiquewhite;
+  background-color: rgb(250, 239, 239);
   height: 1000px;
 }
 
