@@ -16,7 +16,7 @@ class SearchBar extends Component {
         this.setState({ countryName: e.target.value });
     };
 
-    handlePressEnter = (e) => {
+    handleSubmit = (e) => {
         e.preventDefault();
         const { setCountryNameAction, fetchCountryDetailsAction } = this.props;
         setCountryNameAction(this.state.countryName);
@@ -26,8 +26,7 @@ class SearchBar extends Component {
 
     render() {
         return (
-
-            <form className="search" onSubmit={event => this.handlePressEnter(event)}>
+            <form className="search" onSubmit={event => this.handleSubmit(event)}>
                 <div className="search-items">
                     <img className="search-icon" src={searchIcon} />
 
@@ -40,7 +39,6 @@ class SearchBar extends Component {
                     />
                 </div>
             </form>
-
         );
     }
 };
