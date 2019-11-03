@@ -15,7 +15,6 @@ header {
   display: flex; 
   flex-direction: row; 
   box-shadow: 0 10px 10px 0 rgba(0,0,0,.2), 0 3px 10px 0 rgba(0,0,0,.19);
-
 }
 
 .banner {
@@ -42,7 +41,7 @@ header {
 }
 
 #icon {
-    height: 60px;
-    padding: 10px;
-    float: left;
+  height: 60px;
+  padding: 10px;
+  float: left;
 } 
