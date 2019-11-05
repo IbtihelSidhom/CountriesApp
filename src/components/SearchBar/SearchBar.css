@@ -1,23 +1,23 @@
 .search-items{
     display: flex; 
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: flex-end;
     align-items: center;
     width: 100%;
     background: rgb(227, 236, 96);
-    height: 60px;
+    height: 50px;
     border-radius: 8px;
     box-shadow: 0 2px 4px 0 rgba(0,0,0,.2), 0 3px 10px 0 rgba(0,0,0,.19);
 }
 
 .search-input {
-    width: 75%;
+    width: 82%;
     padding: 10px;
     border: 1px solid #eee;
     border-radius: 4px;
 }
 
 .search-icon { 
-  width: 7%;
-  padding: 10px;
+  width: 6%;
+  padding: 15px;
 }
