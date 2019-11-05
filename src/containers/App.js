@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import SearchBar from '../components/SearchBar/SearchBar';
 import CountryInfos from '../components/CountryInfos/CountryInfos';
+import Header from '../components/Header/Header';
 import "./App.css";
 
 
@@ -10,7 +11,7 @@ const App = () => {
   return (
     <div className="App" >
 
-      <header></header>
+      <Header />
 
       <div className="banner"> </div>
 

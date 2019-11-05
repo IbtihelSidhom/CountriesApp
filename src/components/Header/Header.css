@@ -1,0 +1,18 @@
+header{
+  margin: 0px;
+  padding: 0px;
+  height: 80px;
+  background-color: rgb(181, 219, 231);
+  width: 100%;
+  z-index: 10;  
+  position: fixed;
+  display: flex; 
+  flex-direction: row; 
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,.2), 0 3px 10px 0 rgba(0,0,0,.19);
+}
+
+.logo{
+    width: 12%;
+    float: left;
+    margin: 16px;
+}
