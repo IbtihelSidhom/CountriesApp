@@ -27,7 +27,6 @@ class SearchBar extends Component {
         return (
             <form onSubmit={event => this.handleSubmit(event)}>
                 <div className="search-items">
-                    <img className="search-icon" src={searchIcon} />
 
                     <input
                         className="search-input"
@@ -36,6 +35,9 @@ class SearchBar extends Component {
                         value={this.state.countryName}
                         onChange={this.handleChange}
                     />
+
+                    <img className="search-icon" src={searchIcon} />
+
                 </div>
             </form>
         );
