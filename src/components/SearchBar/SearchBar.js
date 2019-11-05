@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from "react-redux";
-import { getCountryName } from '../selectors/index';
-import { setCountryName, fetchCountryDetails } from '../actions/index';
-import { searchIcon } from "../assets/icons/index";
-import "./index.css";
+import { getCountryName } from '../../selectors/index';
+import { setCountryName, fetchCountryDetails } from '../../actions/index';
+import { searchIcon } from "../../assets/icons/index";
+import "./SearchBar.css";
 
 
 class SearchBar extends Component {
@@ -21,12 +21,11 @@ class SearchBar extends Component {
         const { setCountryNameAction, fetchCountryDetailsAction } = this.props;
         setCountryNameAction(this.state.countryName);
         fetchCountryDetailsAction(this.state.countryName);
-        this.setState({ countryName: "" });
     };
 
     render() {
         return (
-            <form className="search" onSubmit={event => this.handleSubmit(event)}>
+            <form onSubmit={event => this.handleSubmit(event)}>
                 <div className="search-items">
                     <img className="search-icon" src={searchIcon} />
 

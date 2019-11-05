@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
-import SearchBar from '../components/SearchBar';
-import CountryInfos from '../components/CountryInfos';
+import SearchBar from '../components/SearchBar/SearchBar';
+import CountryInfos from '../components/CountryInfos/CountryInfos';
 import "./App.css";
 
 
@@ -14,7 +14,9 @@ const App = () => {
 
       <div className="banner"> </div>
 
-      <SearchBar />
+      <div className="searchBar">
+        <SearchBar />
+      </div>
 
       <div className="content">
         <CountryInfos />
