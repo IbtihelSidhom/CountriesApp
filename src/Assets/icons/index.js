@@ -17,3 +17,4 @@ export { default as OceaniaIcon } from "./geography/018-australia.png";
 export { default as telephoneIcon } from "./telephone.png";
 export { default as numbersIcon } from "./numbers.png";
 
+export { default as logo } from "./logo.png";
