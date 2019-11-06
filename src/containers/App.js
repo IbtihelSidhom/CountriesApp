@@ -1,29 +1,54 @@
-import React from 'react';
-import './App.css';
+import React, { Component } from 'react';
+import { connect } from "react-redux";
+import { getError } from '../selectors';
 import SearchBar from '../components/SearchBar/SearchBar';
 import CountryInfos from '../components/CountryInfos/CountryInfos';
 import Header from '../components/Header/Header';
 import "./App.css";
+import renderEmpty from 'antd/lib/config-provider/renderEmpty';
+import { toggleError } from '../actions';
 
 
-const App = () => {
+class App extends Component {
 
-  return (
-    <div className="App" >
+  componentDidMount() {
+    this.props.toggleErrorAction(true);
+  }
 
-      <Header />
 
-      <div className="banner"> </div>
+  render() {
+    const { error } = this.props;
 
-      <div className="searchBar">
-        <SearchBar />
+    return (
+      <div className="App" >
+
+        <Header />
+
+        <div className="banner"> </div>
+
+        <div className="searchBar">
+          <SearchBar />
+        </div>
+
+        <div className="content">
+          {error ? <div> Please enter a valid country name...</div>
+            : <CountryInfos />}
+        </div>
       </div>
-
-      <div className="content">
-        <CountryInfos />
-      </div>
-    </div>
-  );
+    );
+  }
 };
 
-export default App;
+const mapStateToProps = state => {
+  return {
+    error: getError(state)
+  };
+};
+
+const mapDispatchToProps = dispatch => {
+  return {
+    toggleErrorAction: value => dispatch(toggleError(value))
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);
